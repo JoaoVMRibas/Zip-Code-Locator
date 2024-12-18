@@ -22,7 +22,7 @@ public class AddressSearcher {
                     .send(request, HttpResponse.BodyHandlers.ofString());
             this.jsonAddress = response.body();
         }catch (IOException | InterruptedException e){
-            System.out.println("Error in the request process. Error message: " + e.getMessage());
+            System.err.println("Error in the request process. Error message: " + e.getMessage());
         }
         return this.jsonAddress;
     }
